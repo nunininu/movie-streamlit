@@ -10,7 +10,7 @@ st.title("2024 KOBIS Daily Box Office 데이터 분석")
 # 데이터 로드
 @st.cache_data  # 데이터 로딩 캐싱으로 성능 최적화
 def load_data():
-    # path = "/home/tom/data/movie_after/dailyboxoffice"
+    # path = "/home/sgcho/data/movie_after/dailyboxoffice"
     path = "data/movie_after_2024_fix.parquet"
     dataset = ds.dataset(path, format="parquet", partitioning="hive")
     df = dataset.to_table().to_pandas()
